@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link rel="stylesheet" href="./css/solid.min.css">
+    <link rel="stylesheet" href="./css/brands.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+    <header>
+        <a href="" class="logo">
+            <img src="./images/logo.png" alt="" class="logo-img">
+            <span>EL GRANDE</span>
+        </a>
+
+        <nav>
+            <a href="">Home</a>
+            <a href="">Bicycle</a>
+            <a href="">Equip</a>
+            <a href="">Dealer</a>
+            <a href="">Club</a>
+        </nav>
+
+        <div>
+            <i class="fas fa-search fa-x4"></i>
+            <i class="fas fa-bell fa-x4"></i>
+        </div>
+    </header>
+
+    <main>
+       <div class="container">
+        
+           <div class="social">
+            <div class="swiper-pagination"></div>
+               <div>
+                <a href="" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="google">
+                    <i class="fab fa-google"></i>
+                </a>
+               </div>
+           </div>
+
+               <div class="swiper-container">
+                   <div class="swiper-wrapper">
+
+                    <div class="swiper-slide" id="one">
+                        <div class="bike-details">
+                            <div class="purchase-details">
+                                <h1>Red Knights</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero autem temporibus expedita
+                                     voluptate sed, minus architecto? Necessitatibus, deserunt magni!
+                                </p>
+                                <span class="price-tag">$ 1299.90</span>
+                                <button class="pay">PAY FOR <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="bike-img">
+                                <img src="./images/bike 1.png" alt="">
+                            </div>
+                        </div>
+                       
+                        <div class="bike_specification">
+                            <div>
+                                <span>35 Inches</span>
+                                <span>100 kmile</span>
+                                <span>45 Speed</span>
+                            </div>
+        
+                            <div>
+                                <h3 class="name">PORSCHE</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide" id="two">
+                        <div class="bike-details">
+                            <div class="purchase-details">
+                                <h1>Dream trip</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero autem temporibus expedita
+                                     voluptate sed, minus architecto? Necessitatibus, deserunt magni!
+                                </p>
+                                <span class="price-tag">$ 899.350</span>
+                                <button class="pay">PAY FOR <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="bike-img">
+                                <img src="./images/bike 2.png" alt="">
+                            </div>
+                        </div>
+                       
+                        <div class="bike_specification">
+                            <div>
+                                <span>26 Inches</span>
+                                <span>50 kmile</span>
+                                <span>30 Speed</span>
+                            </div>
+        
+                            <div>
+                                <h3 class="name">HAPTIC</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" id="three">
+                        <div class="bike-details">
+                            <div class="purchase-details">
+                                <h1>Contracteds</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero autem temporibus expedita
+                                     voluptate sed, minus architecto? Necessitatibus, deserunt magni!
+                                </p>
+                                <span class="price-tag">$ 2400.50</span>
+                                <button class="pay">PAY FOR <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="bike-img">
+                                <img src="./images/bike 3.png" alt="">
+                            </div>
+                        </div>
+                       
+                        <div class="bike_specification">
+                            <div>
+                                <span>40 Inches</span>
+                                <span>120 kmile</span>
+                                <span>50 Speed</span>
+                            </div>
+        
+                            <div>
+                                <h3 class="name">BOTTECCHIA</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                   </div>
+                  
+               </div>
+
+               <div class="control">
+                   <button class="prev">
+                       <i class="fas fa-chevron-left"></i>
+                   </button>
+                   <button class="next">
+                    <i class="fas fa-chevron-right"></i>
+                   </button>
+               </div>
+        </div>
+
+    </main>
+    
+
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          direction: 'horizontal',
+          background: "white",
+        //   effect: 'fade',
+        //   autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false
+        //   },
+          navigation: {
+              nextEl: '.next',
+              prevEl: '.prev'
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
+
+        console.log(window.innerHeight, window.innerWidth);
+      </script>
+</body>
+</html>
