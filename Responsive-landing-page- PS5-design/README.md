@@ -7,4 +7,4 @@ This video is about the Landing Page UI design with responsive Landing Page Desi
 Thanks,
 [Sudais](https://www.youtube.com/c/SudaisCoder)
 
-![preview](https://user-images.githubusercontent.com/76812554/111662992-98ebc100-883a-11eb-92c8-029e47db5764.jpg)
+![preview](https://github.com/SudaisDeveloper/Landing-Page/blob/cc1bf68ecffabde3fec2ff1e17f7cfa730d7ec39/Responsive-landing-page-%20PS5-design/preview.jpg)
