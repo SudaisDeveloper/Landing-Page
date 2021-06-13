@@ -1,0 +1,370 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #fefefe;
+	overflow-x: hidden;
+	position: relative;
+}
+
+img	{
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/*ends base*/
+
+.container {
+	width: 1280px;
+	max-width: 97%;
+	margin: 0 auto;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: red;
+}
+
+/*ends basic*/
+
+.hero {
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	background: #2c1657;
+	position: relative;
+}
+
+.hero header {
+	width: 100%;
+	height: 110px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.hero header .logo {
+	width: 15%;
+}
+
+.hero header .logo h2 {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #e9872f;
+}
+
+.hero header nav {
+	width: 85%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hero header nav ul {
+	list-style: none;
+}
+
+.hero header nav ul li {
+	display: inline-block;
+}
+
+.hero header nav ul li a {
+	color: #fff;
+	font-weight: 600;
+	padding: 0px 15px 0px 5px;
+	margin-right: 5px;
+	border-bottom: 1px solid transparent;
+	position: relative;
+	transition-duration: .3s;
+	transition-property: color, border-bottom;
+}
+
+.hero header nav ul li:not(.active) a:after {
+	content: "";
+	border: 1px solid transparent;
+	position: absolute;
+	bottom: -2px;
+	left: 0px;
+	right: 100%;
+	transition-duration: .3s;
+	transition-property: right;
+	transition-timing-function: ease-in;
+}
+
+.hero header nav ul li:not(.active) a:hover:after {
+	border: 1px solid #e9872f;
+	right: 0;
+}
+
+.hero header nav ul li.active a {
+	border-bottom: 2px solid #e9872f;
+	color: #e9872f;
+}
+
+.hero header nav .search {
+	width: 250px;
+	position: relative;
+}
+
+.hero header nav .search input {
+	width: 100%;
+	border: none;
+	outline: none;
+	background: transparent;
+	border-bottom: 2px solid #e9872f;
+	padding: 5px 40px 10px 5px;
+	color: #fff;
+	position: relative;
+	transition: .3s border-bottom;
+}
+
+.hero header nav .search input:hover {
+	border-bottom: 2px solid rgb(249 122 9);
+}
+
+.hero header nav .search i {
+	font-size: 14px;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	z-index: 1;
+}
+
+.hero .banner {
+	margin-top: 250px;
+}
+
+.hero .banner .container {
+	max-width: 92%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero .banner .details,
+.hero .banner .cover {
+	flex: 1;
+}
+
+.hero .banner .cover img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0px 2px 2px #333);
+	animation: slide 1s ease;
+}
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.hero .banner .details h1 {
+	font-size: 42px;
+	line-height: 1.1
+}
+
+.hero .banner .details p {
+	max-width: 450px;
+	margin: 25px 0px 30px;
+}
+
+.hero .banner .details .btn {
+	background: #fe932b;
+	color: #0a0643;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 18px 55px;
+	border-radius: 30px;
+	transition: .3s box-shadow;
+}
+
+.hero .banner .details .btn:hover {
+	box-shadow: 0px 0px 5px #9e5a17, 0px 0px 15px #926e4a;
+}
+
+.hero .banner .worked_with {
+	margin-top: 150px;
+}
+
+.hero .banner .worked_with h3 {
+	margin-bottom: 15px;
+	font-weight: 300;
+}
+
+.hero .banner .worked_with .col {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero .banner .worked_with .company a {
+	color: #676767;
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.hero .banner .worked_with .company a:hover {
+	color: #64cec7;
+}
+
+.hero .banner .worked_with .connect {
+	position: relative;
+}
+
+.hero .banner .worked_with .connect a {
+	font-size: 18px;
+	color: #e7e7e7;
+	margin-left: 15px;
+	transition: .3s color;
+}
+
+.hero .banner .worked_with .connect a:hover {
+	color: #64cec7;
+}
+
+.hero .banner .worked_with .connect:before {
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background: #e9872f;
+	position: absolute;
+	top: 9px;
+	left: -10px;
+}
+
+/*now we'r going to make it mobile friendly*/
+
+@media screen and (max-width: 930px) {
+	.hero .banner {
+		margin-top: 80px;
+	}
+	.hero .banner .container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.hero .banner .details {
+		margin-bottom: 50px;
+	}
+	.hero .banner .details h1 {
+		font-size: 35px;
+	}
+	.hero .banner .details .btn {
+		padding: 12px 38px;
+	}
+	.hero .banner .worked_with {
+		margin-top: 80px;
+		padding-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.hamb {
+		width: 40px;
+		height: auto;
+		cursor: pointer;
+		position: absolute;
+		top: 40px;
+		right: 3%;
+		z-index: 4;
+	}
+	.hamb span {
+		width: 100%;
+		height: 3px;
+		display: block;
+		background: #fff;
+	}
+	.hamb span:nth-child(2) {
+		margin: 7px 0px;
+	}
+
+	.hero header nav {
+		display: block;
+		background: #6744ab;
+		width: 85%;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		right: -85%;
+		z-index: 2;
+		padding: 46px 50px;
+		transition: .5s right;
+	}
+
+	.hero header nav.open {
+		right: 0%;
+	}
+
+	.hero header nav ul li {
+		display: block;
+	}
+
+	.hero header nav ul li a {
+		display: block;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 400;
+		padding: 0px;
+		margin-right: 0px;
+		margin-bottom: 25px;
+		border-bottom: none;
+	}
+
+	.hero header nav ul li a:focus,
+	.hero header nav ul li a:hover {
+		color: #e9872f;
+	}
+
+	.hero header nav ul li:not(.active) a:after {
+		border: none;
+	}
+
+	.hero header nav ul li:not(.active) a:hover:after {
+		border: none;
+	}
+
+	.hero header nav ul li.active a {
+		border-bottom: none;
+	}
+
+	.hero header nav .search {
+		width: 80%;
+		position: absolute;
+		top: 75%;
+		right: 11%;
+		left: 11%;
+	}
+
+	.hero header nav .search input {
+		font-size: 16px;
+		padding: 5px 40px 20px 10px;
+		color: #fff;
+	}
+
+	.hero header nav .search input:focus,
+	.hero header nav .search input:hover {
+		border-bottom: 2px solid green;
+	}
+}
