@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/*google font*/
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #1781F9;
+	overflow-x: hidden;
+
+	position: relative;
+}
+
+h1 {line-height: 1.1;}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: green;
+}
+
+/*ends base*/
+
+.container {
+	width: 1280px;
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.btn {
+	display: inline-block;
+	background: linear-gradient(45deg, #FD7F4D, #FD4D58);
+	color: #ffffff;
+	padding: 10px 25px;
+	border-radius: 50px;
+	transition: .3s background;
+}
+
+/*ends basic*/
+
+.hero {
+	width: 100%;
+	height: 100vh;
+	padding: 0 0 40px;
+	background-color: #00031d;
+	background-image: url(../img/background.png); 
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 50%;
+
+	position: relative;
+}
+
+.hero header {
+	padding: 40px 0px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero header .logo a img {
+	width: 150px;
+	height: auto;
+}
+
+.hero header nav ul {
+	list-style: none;
+}
+
+.hero header nav ul li {
+	display: inline-block;
+}
+
+.hero header nav ul li:not(:last-child) a {
+	font-size: .95em;
+	font-weight: 700;
+	margin-left: 25px;
+	color: #F3F3F3;
+	transition: .3s color;
+	
+	position: relative;
+}
+
+.hero header nav ul li:not(:last-child) a:hover {
+	color: #1985F4;
+}
+
+.hero header nav ul li a.active {
+	color: #1985F4;
+}
+
+.hero header nav ul li a.active:after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: #FD4D58;
+	border-radius: 50px;
+
+	position: absolute;
+	top: -5px;
+	right: -10px;
+}
+
+.hero header nav ul li:last-child a {
+	margin-left: 25px;
+}
+
+.hero header nav ul li a.btn {
+	transition: .3s box-shadow;
+}
+
+.hero header nav ul li a.btn:hover {
+	box-shadow: 0 0 5px #e0e0e0, 0 0 15px #b5b3b3
+}
+
+.hero .mid {
+	margin-top: 22vh;
+	width: 500px;
+	max-width: 100%;
+}
+
+.hero .mid .details h1 {
+	font-size: 3em;
+	font-weight: 900;
+	margin-bottom: 4vh;
+	text-transform: capitalize;
+}
+
+.hero .mid .details p {
+	font-size: 1.1em;
+	color: #3B8BDE;
+	line-height: 1.6;
+	margin-bottom: 4vh;
+}
+
+.hero .mid .action a:nth-child(2) {
+	margin-left: 20px;
+	background: transparent;
+	color: #1781F9;
+	padding: 8px 23px;
+	border: 2px solid #1781F9;
+}
+
+.hero .mid .action a:first-child {
+	transition: .3s box-shadow;
+}
+
+.hero .mid .action a:first-child:hover {
+	box-shadow: 0 0 5px #e0e0e0, 0 0 15px #b5b3b3
+}
+
+.hero .connect {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	position: absolute;
+	bottom: 50px;
+	margin-top: 50px;
+}
+
+.hero .connect p {
+	font-size: .9em;
+	font-weight: 700;
+	color: #CBCBCB;
+	margin-right: 60px;
+
+	position: relative;
+}
+
+.hero .connect p:after {
+	content: "";
+	width: 30px;
+	height: 2px;
+	background: #1781F9;
+
+	position: absolute;
+	top: 10px;
+	right: -45px;
+}
+
+.hero .connect .links a {
+	color: #F3F3F3;
+	margin-right: 10px;
+	transition: .3s color;
+}
+
+.hero .connect .links a:hover {
+	color: #1781F9;
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 980px) {
+	.hamb {
+		width: 35px;
+		height: 25px;
+		cursor: pointer;
+		position: absolute;
+		top: 50px;
+		right: 5%;
+		z-index: 5;
+	}
+
+	.hamb span {
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: #fff;
+	}
+
+	.hamb span.mid {
+		margin: 8px 0px;
+	}
+
+	.hero header nav {
+		width: 370px;
+		height: 100%;
+		background: #000b50;
+		padding: 50px;
+		box-shadow: 0 0 5px #000e6f, 0 0 15px #292c3e;
+
+		position: absolute;
+		top: 0px;
+		right: -390px;
+		bottom: 0px;
+		z-index: 4;
+
+		transition: .5s right;
+	}
+
+	.hero header nav.check {
+		right: 0px;
+	}
+
+	.hero header nav ul li {
+		display: block;
+	}
+
+	.hero header nav ul li:not(:last-child) a {
+		font-size: 1.3em;
+		margin: 0 0 20px;
+	}
+
+	.hero header nav ul li:last-child a {
+		margin: 10px 0 0;
+	}
+
+	.hero header nav ul li a.btn {
+		padding: 10px 45px;
+		transition: .3s box-shadow;
+		background: transparent;
+		border: 2px solid #fff;
+		border-radius: 0px;
+	}
+
+	.hero header nav ul li a.btn:hover {
+		box-shadow: 0 0 5px #0020ff, 0 0 15px #001ff7;
+	}
+
+	.hero {
+		background-image: none;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.hero .mid {
+		margin-top: 15vh;
+	}
+}
